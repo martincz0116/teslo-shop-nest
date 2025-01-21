@@ -14,4 +14,7 @@
 
 5. Levantar la base de datos ``` docker-compose up -d ```
 
-6. Levantar proyecto  ``` yarn start:dev ```
+6. Ejecutar seed para cargar informacion en la base de datos
+``` localhost:3000/api/seed ```
+
+7. Levantar proyecto  ``` yarn start:dev ```
