@@ -14,9 +14,16 @@ interface SeedProduct {
 type ValidSizes = 'XS' | 'S' | 'M' | 'L' | 'XL' | 'XXL' | 'XXXL';
 type ValidTypes = 'shirts' | 'pants' | 'hoodies' | 'hats';
 
+interface SeedUser {
+    email: string;
+    fullName: string;
+    password: string;
+    roles: string[];
+}
 
 interface SeedData {
     products: SeedProduct[];
+    users: SeedUser[];
 }
 
 
@@ -804,5 +811,31 @@ export const initialData: SeedData = {
             title: "Kids Corp Jacket",
             gender: 'kid'
         },
+    ],
+    users: [
+        {
+            email: "admin@mail.com",
+            fullName: "Administrador",
+            password: "Hola123",
+            roles: ['admin']
+        },
+        {
+            email: "superuser@mail.com",
+            fullName: "Super Usuario",
+            password: "Hola123",
+            roles: ['super-user']
+        },
+        {
+            email: "user@mail.com",
+            fullName: "Usuario",
+            password: "Hola123",
+            roles: ['user']
+        },
+        {
+            email: "allmight@mail.com",
+            fullName: "Martin Carrillo",
+            password: "Hola123",
+            roles: ['admin', 'user', 'super-user']
+        }
     ]
 }
