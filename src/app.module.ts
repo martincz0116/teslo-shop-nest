@@ -8,6 +8,7 @@ import { FilesModule } from './files/files.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { AuthModule } from './auth/auth.module';
+import { MessagesWebSocketModule } from './messages-web-socket/messages-web-socket.module';
 
 @Module({
   imports: [
@@ -26,7 +27,7 @@ import { AuthModule } from './auth/auth.module';
 
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'public'),
-    }),    
+    }),
 
     ProductsModule,
 
@@ -36,7 +37,9 @@ import { AuthModule } from './auth/auth.module';
 
     FilesModule,
 
-    AuthModule
+    AuthModule,
+
+    MessagesWebSocketModule
   ],
   controllers: [],
   providers: [],
